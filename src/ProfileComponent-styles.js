@@ -24,8 +24,8 @@ export default css`:host {
 }
 
 .photo img {
-  height: 100px;
-  width: 100px;
+  height: var(--height--profile--card, 100px);
+  width: var(--width--profile--card, 100px);
   border-radius: 50%;
 }
 
@@ -35,6 +35,13 @@ export default css`:host {
 
 .names {
   margin-right: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.names p {
+  margin: 2px;
 }
 
 .username {

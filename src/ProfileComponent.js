@@ -27,6 +27,7 @@ export class ProfileComponent extends LitElement {
       username: { type: String },
       name: { type: String },
       photo: { type: String },
+      link: { type: String },
     };
   }
 
@@ -34,8 +35,9 @@ export class ProfileComponent extends LitElement {
   constructor() {
     super();
     this.username = '16joseartica';
-    this.name= 'Jose Luis Artica Villarroel'
-    this.photo= 'https://3.bp.blogspot.com/-JfL1o7oSnKI/VmodObHF9cI/AAAAAAAABLY/nKKRXw0-yiU/s1600/homero_456_336.jpg'
+    this.name= 'Jose Luis Artica Villarroel';
+    this.photo= 'https://3.bp.blogspot.com/-JfL1o7oSnKI/VmodObHF9cI/AAAAAAAABLY/nKKRXw0-yiU/s1600/homero_456_336.jpg';
+    this.link= '';
   }
 
   static get styles() {
@@ -62,7 +64,7 @@ export class ProfileComponent extends LitElement {
             </div>
           </div>
           <div class="change">
-            <a href="#">Cambiar</a>
+            <a href="#">${this.link}</a>
           </div>
         </div>
         
