@@ -29,7 +29,16 @@
     <bbva-core-demo-helper>
       <bbva-core-demo-case heading="Basic" description="Default specs">
         <template>
-          <profile-component link="Seguir"></profile-component>
+          <profile-component id="demo"></profile-component>
+          <script type="module">
+            document.addEventListener('WebComponentsReady', async () => {
+              let data = await fetch('./data/data.json').then((reponse) =>
+                reponse.json()
+              );
+              let demo = document.querySelector('#demo');
+              demo.item = data.item
+            });
+          </script>
         </template>
       </bbva-core-demo-case>
     </bbva-core-demo-helper>

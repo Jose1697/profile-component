@@ -24,20 +24,14 @@ export class ProfileComponent extends LitElement {
   // Declare properties
   static get properties() {
     return {
-      username: { type: String },
-      name: { type: String },
-      photo: { type: String },
-      link: { type: String },
+      item: { type: Object },
     };
   }
 
   // Initialize properties
   constructor() {
     super();
-    this.username = '16joseartica';
-    this.name= 'Jose Luis Artica Villarroel';
-    this.photo= 'https://3.bp.blogspot.com/-JfL1o7oSnKI/VmodObHF9cI/AAAAAAAABLY/nKKRXw0-yiU/s1600/homero_456_336.jpg';
-    this.link= '';
+    this.item = {};
   }
 
   static get styles() {
@@ -52,19 +46,19 @@ export class ProfileComponent extends LitElement {
     return html`
       <div class="profile">
         <div class="photo">
-          <img src="${this.photo}" alt="MDN">
+          <img src="${this.item.photo}" alt="MDN">
         </div>
         <div class="data">
           <div class="names">
             <div class="username">
-              <p>${this.username}</p>
+              <p>${this.item.username}</p>
             </div>
             <div class="name">
-              <p>${this.name}</p>
+              <p>${this.item.name}</p>
             </div>
           </div>
           <div class="change">
-            <a href="#">${this.link}</a>
+            <a href="#">${this.item.link}</a>
           </div>
         </div>
         
